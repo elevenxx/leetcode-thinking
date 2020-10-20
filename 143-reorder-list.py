@@ -66,3 +66,14 @@ class Solution:
             prev = cur
             cur = temp
         return prev
+    
+    def mergeList(self, l1, l2):
+        while l1 and l2:
+            p1 = l1.next
+            p2 = l2.next
+
+            l1.next = l2
+            l1 = p1
+
+            l2.next = l1
+            l2 = p2
