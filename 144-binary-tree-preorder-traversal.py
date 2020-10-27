@@ -10,3 +10,7 @@ class Solution:
             root = stk.pop()
             root = root.right
         return ans
+
+class Solution:
+    def preorderTraversal(self, root: TreeNode) -> List[int]:
+        return [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right) if root else []
