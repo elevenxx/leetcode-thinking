@@ -57,3 +57,25 @@ class Solution:
 
         # 卖出过0，1，2次的最大收益
         return max(dp[n-1][0][1],dp[n-1][0][2],0)
+
+    
+    
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+
+        # 第一二次买之前的最低价
+        buy1 = buy2 = float('inf')  
+
+        # 第一二次卖出股票后的利润
+        pro1 = pro2 = 0
+
+        for p in prices:
+            buy1 = min(buy1, p)
+            pro1 = max(pro1, p - buy1)
+
+            # p - pro1 是用第一次的钱抵消了一部分第二次买的钱
+            buy2 = min(buy2, p - pro1) 
+            pro2 = max(pro2, p - buy2)
+        
+        return pro2    
+    
