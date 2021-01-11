@@ -27,7 +27,7 @@
 链接：https://leetcode-cn.com/problems/smallest-string-with-swaps
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 """
-
+# 参考https://leetcode-cn.com/problems/smallest-string-with-swaps/solution/python-bing-cha-ji-dfsbfssan-chong-jie-f-yy89/
 # 并查集
 class UnionFind:
     def __init__(self, s):
